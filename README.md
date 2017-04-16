@@ -1,6 +1,6 @@
 # Easy Permissions
 
-Request permissions from anywhere as long as you have context.
+Request permissions from anywhere as long as you have context. Android requires that you use an `Activity` to request permissions, with this library that restriction is no longer an issue.
 
 ----
 
