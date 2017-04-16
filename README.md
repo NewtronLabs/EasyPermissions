@@ -31,21 +31,24 @@ As long as you have context you can request a permission from anywhere. Make sur
 This example uses a `Service` to request the permission, something native Android does not allow.
 
 ```java
-public class MyService extends Service implements IPermissionsListener
+public class ExampleService extends Service implements IPermissionsListener
 {
     @Override
     public void onCreate()
     {
         super.onCreate();
 
-        // Pass as many permissions as you like. 
-        // You may even pass an array or seperate values by comma.
+        // Request as many permissions as you like. You may seperate them by commas or pass an array.
+        // Make sure that these permissions are in your Manifest as well.
         EasyPermissions.getInstance().requestPermissions(this, this,
-                android.Manifest.permission.CAMERA);
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.CAMERA,
+                Manifest.permission.CALL_PHONE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }
 
     @Override
-    public void onRequestSent(Set<String> permissionsRequested)
+    public void onRequestSent(Set<String> set)
     {
 
     }
@@ -60,10 +63,13 @@ public class MyService extends Service implements IPermissionsListener
 
 ### Always add the permission to your AndroidManifest.xml
 
-As a rule you must add the desired permission to your Manifest.
+As a requirement permissions must be in the Manifest.
 
 ```xml
- <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
  ```
 
 ### Additional Sample
