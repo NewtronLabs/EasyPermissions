@@ -1,6 +1,6 @@
 # Easy Permissions
 
-Request permissions from anywhere as long as you have context. Android requires that you use an `Activity` to request permissions, with this library that restriction is no longer an issue.
+Android requires that these request come from an `Activity`. With Easy Permissions this is no longer an issue, you may request permission from anywhere as long as you provide `Context`. In addition, if you request a permission that is already granted the user will not be prompted.
 
 ----
 
@@ -28,7 +28,7 @@ compile 'com.newtronlabs.easypermissions:easypermissions:1.0.0'
 ### Request Permission
 As long as you have context you can request a permission from anywhere. Make sure you implement `IPermissionsListener` to receive information about what is happening with your permission request.
 
-This example uses a Service to request the permission, something native Android does not allow.
+This example uses a `Service` to request the permission, something native Android does not allow.
 
 ```java
 public class MyService extends Service implements IPermissionsListener
