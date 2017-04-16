@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Easy Permissions Sample</string>
+
+    <string name="title">Information</string>
+
+    <string name="information">Each Android app operates in a process sandbox, apps must
+        explicitly request access to resources and data outside their sandbox. If the device
+        is running Android 6.0 (API level 23) or higher, and the app\'s targetSdkVersion is 23
+        or higher, the app requests permissions from the user at run-time.
+
+        \n\nHowever, Android requires that these request come from an Activity. With Easy Permissions
+        this is no longer an issue, you may request permission from anywhere as long as you provide
+        context. In addition if you request a permission that is already granted the user will not
+        be prompted.
+    </string>
+</resources>

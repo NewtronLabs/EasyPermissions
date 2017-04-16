@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="NewtronLabsBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="android:buttonStyle">@style/NewtronLabsButton</item>
+        <item name="buttonStyle">@style/NewtronLabsButton</item>
+    </style>
+
+    <style name="NewtronLabsTheme" parent="@style/NewtronLabsBaseTheme">
+    </style>
+
+    <style name="NewtronLabsMainFont">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="NewtronLabsMainFont.Important">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="NewtronLabsSecondaryFont">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">#FF444444</item>
+    </style>
+
+    <style name="NewtronLabsSecondaryFont.Important">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="NewtronLabsButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginLeft">@dimen/margin_horizontal_basic</item>
+        <item name="android:layout_marginRight">@dimen/margin_horizontal_basic</item>
+        <item name="android:layout_marginTop">@dimen/margin_vertical_basic</item>
+    </style>
+
+
+</resources>
