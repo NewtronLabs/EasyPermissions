@@ -70,10 +70,10 @@ public class ExampleService extends Service implements IPermissionsListener
 As a requirement permissions must be in the Manifest.
 
 ```xml
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-permission android:name="android.permission.CALL_PHONE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
  ```
 
 ### Additional Sample
