@@ -30,6 +30,7 @@ allprojects {
     repositories {
         jcenter()
         maven { url "http://code.newtronlabs.com:8081/artifactory/libs-release-local" }
+        apply plugin: com.newtronlabs.android.NewtronLabsPlugin
     }
 }
 ```
@@ -37,8 +38,6 @@ allprojects {
 In the `build.gradle` for your app.
 
 ```gradle
-apply plugin: 'com.newtronlabs.android'
-
 dependencies {
     provided 'com.newtronlabs.easypermissions:easypermissions:2.0.0'
 }
