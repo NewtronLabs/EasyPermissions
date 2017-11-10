@@ -30,8 +30,11 @@ allprojects {
     repositories {
         jcenter()
         maven { url "http://code.newtronlabs.com:8081/artifactory/libs-release-local" }
-        apply plugin: com.newtronlabs.android.NewtronLabsPlugin
     }
+}
+
+subprojects {
+    apply plugin: 'com.newtronlabs.android'
 }
 ```
 
