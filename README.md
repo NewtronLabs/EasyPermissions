@@ -115,7 +115,7 @@ public class ExampleService extends Service implements IPermissionsListener
 ```
 
 
-### Always add the permission to your AndroidManifest.xml
+#### Always add the permission to your AndroidManifest.xml
 
 As a requirement permissions must be in the Manifest.
 
