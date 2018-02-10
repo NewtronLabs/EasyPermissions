@@ -137,7 +137,7 @@ More detailed exmaples can be found in this repo's samples folders: **EpSample**
 #### Version 2.0.0
 * Improved performance by 24%. 
 
-### Version 2.1.0
+#### Version 2.1.0
 * Added feature that automatically requests all permissions from Manifest.
 
 ---
