@@ -1,3 +1,7 @@
+Please take a few minutes and let us know how we are doing by filling out this survey: https://goo.gl/forms/97TYeG6Wx5CA4lBV2
+
+---
+
 # Easy Permissions
 
 Android requires that these request come from an `Activity`. With Easy Permissions this is no longer an issue, you may request permission from anywhere as long as you provide `Context`. In addition, if you request a permission that is already granted the user will not be prompted.
