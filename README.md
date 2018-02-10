@@ -129,6 +129,8 @@ As a requirement permissions must be in the Manifest.
 ### Additional Sample
 More detailed exmaples can be found in this repo's samples folders: **EpSample**.
 
+---
+
 ## Release Notes
 
 #### Version 1.0.0
@@ -139,6 +141,7 @@ More detailed exmaples can be found in this repo's samples folders: **EpSample**
 
 #### Version 2.1.0
 * Added feature that automatically requests all permissions from Manifest.
+
 
 ---
 ## License
