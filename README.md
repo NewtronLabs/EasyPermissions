@@ -42,14 +42,46 @@ In the `build.gradle` for your app.
 
 ```gradle
 dependencies {
-    provided 'com.newtronlabs.easypermissions:easypermissions:2.0.0'
+    provided 'com.newtronlabs.easypermissions:easypermissions:2.1.0'
 }
 ```
 
 ### Request Permission
 As long as you have context you can request a permission from anywhere. Make sure you implement `IPermissionsListener` to receive information about what is happening with your permission request.
 
-This example uses a `Service` to request the permission, something native Android does not allow.
+#### Example 1
+This example uses a `Service` to request the permission, something native Android does not allow. It also automatically requests the permissions that you have enabled on your Manifest.
+
+```java
+public class ExampleService extends Service implements IPermissionsListener
+{
+    @Override
+    public void onCreate()
+    {
+        super.onCreate();
+        
+        // Will request all permissions from the Manifest automatically.
+        EasyPermissions.getInstance().requestPermissions(this, this);
+    }
+
+    @Override
+    public void onRequestSent(Set<String> set)
+    {
+
+    }
+
+    @Override
+    public void onFailure()
+    {
+
+    }
+}
+```
+
+
+
+#### Example 2
+This example uses a `Service` to request the permission, something native Android does not allow. This example allows more flexibility so that you can decide which permissions you desire.
 
 ```java
 public class ExampleService extends Service implements IPermissionsListener
@@ -81,6 +113,7 @@ public class ExampleService extends Service implements IPermissionsListener
     }
 }
 ```
+
 
 ### Always add the permission to your AndroidManifest.xml
 
