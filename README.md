@@ -42,7 +42,7 @@ In the `build.gradle` for your app.
 
 ```gradle
 dependencies {
-    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.1.1'
+    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.1.4'
 }
 ```
 
@@ -67,13 +67,16 @@ public class ExampleService extends Service implements IPermissionsListener
     @Override
     public void onRequestSent(Set<String> set)
     {
-
     }
 
     @Override
     public void onFailure()
     {
-
+    }
+    
+    @Override
+    public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions)
+    {
     }
 }
 ```
@@ -103,13 +106,16 @@ public class ExampleService extends Service implements IPermissionsListener
     @Override
     public void onRequestSent(Set<String> set)
     {
-
     }
 
     @Override
     public void onFailure()
     {
-
+    }
+    
+    @Override
+    public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions)
+    {
     }
 }
 ```
