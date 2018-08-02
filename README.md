@@ -136,20 +136,6 @@ As a requirement permissions must be in the Manifest.
 More detailed exmaples can be found in this repo's samples folders: **EpSample**.
 
 ---
-
-## Release Notes
-
-#### Version 1.0.0
-* Initial release.
-
-#### Version 2.0.0
-* Improved performance by 24%. 
-
-#### Version 2.1.0
-* Added feature that automatically requests all permissions from Manifest.
-
-
----
 ## License
 
 Easy Permissions binaries and source code can only be used in accordance with Freeware license. That is, freeware may be used without payment, but may not be modified. The developer of Easy Permissions retains all rights to change, alter, adapt, and/or distribute the software. Easy Permissions is not liable for any damages and/or losses incurred during the use of Easy Permissions.
