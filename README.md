@@ -42,7 +42,7 @@ In the `build.gradle` for your app.
 
 ```gradle
 dependencies {
-    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.2.0'
+    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.2.2'
 }
 ```
 
