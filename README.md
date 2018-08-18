@@ -123,7 +123,7 @@ public class ExampleService extends Service implements IPermissionsListener
 
 #### Always add the permission to your AndroidManifest.xml
 
-As a requirement permissions must be in the Manifest.
+As an Android requirement permissions must be included in the Manifest.
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
