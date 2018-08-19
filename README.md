@@ -1,6 +1,6 @@
 # Easy Permissions
 
-Android requires that these request come from an `Activity`. With Easy Permissions this is no longer an issue, you may request permission from anywhere as long as you provide `Context`. In addition, if you request a permission that is already granted the user will not be prompted.
+Beginning with Android 6.0 (API level 23) if your app needs a dangerous permission, you must request it from the user. Android requires that these request come from an `Activity`. With Easy Permissions this is no longer an issue, you may request permission from anywhere as long as you provide `Context`. In addition, if you request a permission that is already granted the user will not be prompted.
 
 <p align="center">
   <img src="https://github.com/NewtronLabs/EasyPermissions/blob/master/Diagram.png" width="56%" height="56%" >
