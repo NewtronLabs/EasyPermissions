@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.newtronlabs.android'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 27
+
     defaultConfig {
         applicationId "com.newtronlabs.easypermissions.sample"
         minSdkVersion 19
-        targetSdkVersion 25
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -20,9 +19,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
 
     // Maven dependency.
-    provided 'com.newtronlabs.easypermissions:easypermissions:2.0.0'
+    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.2.2'
 }

@@ -1,7 +1,5 @@
 package com.newtronlabs.easypermissions.sample;
 
-
-import android.Manifest;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
@@ -19,13 +17,23 @@ public class ExampleService extends Service implements IPermissionsListener
     {
         super.onCreate();
 
-        // Request as many permissions as you like.
-        // Make sure that these permissions are in your Manifest as well.
-        EasyPermissions.getInstance().requestPermissions(this, this,
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.CAMERA,
-                Manifest.permission.CALL_PHONE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        // Will request all permissions from the Manifest automatically.
+        EasyPermissions.getInstance().requestPermissions(this, this);
+    }
+
+    @Override
+    public void onRequestSent(Set<String> set)
+    {
+    }
+
+    @Override
+    public void onFailure()
+    {
+    }
+
+    @Override
+    public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions)
+    {
     }
 
     @Nullable
@@ -33,17 +41,5 @@ public class ExampleService extends Service implements IPermissionsListener
     public IBinder onBind(Intent intent)
     {
         return null;
-    }
-
-    @Override
-    public void onRequestSent(Set<String> set)
-    {
-
-    }
-
-    @Override
-    public void onFailure()
-    {
-
     }
 }
