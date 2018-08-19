@@ -21,7 +21,7 @@ buildscript {
         maven { url "http://code.newtronlabs.com:8081/artifactory/libs-release-local" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.3'
+        classpath 'com.android.tools.build:gradle:3.1.4'
         classpath 'com.newtronlabs.android:plugin:2.0.1'
     }
 }
