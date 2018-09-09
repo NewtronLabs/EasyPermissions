@@ -42,7 +42,7 @@ In the `build.gradle` for your app.
 
 ```gradle
 dependencies {
-    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.2.2'
+    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.3.0'
 }
 ```
 
@@ -70,7 +70,7 @@ public class ExampleService extends Service implements IPermissionsListener
     }
 
     @Override
-    public void onFailure()
+    public void onFailure(IError error)
     {
     }
     
