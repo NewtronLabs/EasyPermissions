@@ -6,6 +6,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 
 import com.newtronlabs.easypermissions.EasyPermissions;
+import com.newtronlabs.easypermissions.listener.IError;
 import com.newtronlabs.easypermissions.listener.IPermissionsListener;
 
 import java.util.Set;
@@ -27,7 +28,7 @@ public class ExampleService extends Service implements IPermissionsListener
     }
 
     @Override
-    public void onFailure()
+    public void onFailure(IError error)
     {
     }
 
@@ -35,6 +36,14 @@ public class ExampleService extends Service implements IPermissionsListener
     public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions)
     {
     }
+
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId)
+    {
+        return START_NOT_STICKY;
+    }
+
 
     @Nullable
     @Override
