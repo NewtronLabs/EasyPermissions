@@ -1,6 +1,6 @@
 # Easy Permissions
 
-Easy Permissions allows you to request all the permissions declared in your Manifest with one line of code. In addition, it allows you to make this request from anywhere in your code; no longer will you have to request permissions exclusively from an `Activity`.
+Easy Permissions allows you to request all the permissions declared in your `AndroidManifest` with one line of code. It knows what permissions you have in your `AndroidManifest` and will request them for you. In addition, it allows you to make this request from anywhere in your code; no longer will you have to request permissions exclusively from an `Activity`.
 
 <p align="center">
   <img src="Diagram.png" width="350" title="Sample use case" alt="Easy Permissions">
@@ -8,29 +8,11 @@ Easy Permissions allows you to request all the permissions declared in your Mani
 
 ----
 
-## Example
+## Sample
+
+Will request all permissions from the `AndroidManifest` automatically.
 ```java
-public class ExampleService extends Service implements IPermissionsListener
-{
-    @Override
-    public void onCreate()
-    {
-        super.onCreate();
-        
-        // Will request all permissions from the Manifest automatically.
-        EasyPermissions.getInstance().requestPermissions(this, this);
-    }
-
-    @Override
-    public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions)
-    {
-    }
-
-    @Override
-    public void onFailure(IError error)
-    {
-    }
-}
+EasyPermissions.getInstance().requestPermissions(this, this);
 ```
 
 # Table of Contents
@@ -79,6 +61,7 @@ dependencies {
 ```
 
 <a name="information"/>
+
 ## Information
 As long as you have `Context` you can request a permission from anywhere. Make sure you implement `IPermissionsListener` to receive information about what is happening with your permission request.
 
