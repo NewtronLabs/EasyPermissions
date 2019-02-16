@@ -1,6 +1,6 @@
 # Easy Permissions
 
-Beginning with Android 6.0 (API level 23) if your app needs a dangerous permission, you must request it from the user. Android requires that these request come from an `Activity`. With Easy Permissions this is no longer an issue, you may request permission from anywhere as long as you provide `Context`. In addition, if you request a permission that is already granted the user will not be prompted.
+Easy Permissions allows you to request all the permissions declared in your Manifest with one line of code. In addition, it allows you to make this request from anywhere in your code; no longer will you have to request permissions exclusively from an `Activity`.
 
 <p align="center">
   <img src="Diagram.png" width="350" title="Sample use case" alt="Easy Permissions">
@@ -8,9 +8,41 @@ Beginning with Android 6.0 (API level 23) if your app needs a dangerous permissi
 
 ----
 
-## How to Use 
+## Example
+```java
+public class ExampleService extends Service implements IPermissionsListener
+{
+    @Override
+    public void onCreate()
+    {
+        super.onCreate();
+        
+        // Will request all permissions from the Manifest automatically.
+        EasyPermissions.getInstance().requestPermissions(this, this);
+    }
 
-### Setup
+    @Override
+    public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions)
+    {
+    }
+
+    @Override
+    public void onFailure(IError error)
+    {
+    }
+}
+```
+
+# Table of Contents
+1. [Setup](#setup)
+2. [Information](#information)
+2. [Example 1](#example)
+3. [Example 2](#example2)
+3. [Additional Example](#additional)
+4. [License](#license)
+
+
+## Setup
 
 Include the below dependencies in your `build.gradle` project.
 
@@ -46,10 +78,12 @@ dependencies {
 }
 ```
 
-### Request Permission
-As long as you have context you can request a permission from anywhere. Make sure you implement `IPermissionsListener` to receive information about what is happening with your permission request.
+<a name="information"/>
+## Information
+As long as you have `Context` you can request a permission from anywhere. Make sure you implement `IPermissionsListener` to receive information about what is happening with your permission request.
 
-#### Example 1
+
+## Example 1
 This example uses a `Service` to request the permission, something native Android does not allow. It also automatically requests the permissions that you have enabled on your Manifest.
 
 ```java
@@ -77,8 +111,8 @@ public class ExampleService extends Service implements IPermissionsListener
 ```
 
 
-
-#### Example 2
+<a name="example2"/>
+## Example 2
 This example uses a `Service` to request the permission, something native Android does not allow. This example allows more flexibility so that you can decide which permissions you desire.
 
 ```java
@@ -111,7 +145,7 @@ public class ExampleService extends Service implements IPermissionsListener
 ```
 
 
-#### Always add the permission to your AndroidManifest.xml
+### Always add the permission to your AndroidManifest.xml
 
 As an Android requirement permissions must be included in the Manifest.
 
@@ -122,7 +156,7 @@ As an Android requirement permissions must be included in the Manifest.
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
  ```
 
-### Additional Sample
+## Additional Example
 More detailed exmaples can be found in this repo's samples folders: **EpSample**.
 
 ---
