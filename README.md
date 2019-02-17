@@ -16,13 +16,17 @@ EasyPermissions.getInstance().requestPermissions(this, this);
 ```
 
 # Table of Contents
-1. [Setup](#setup)
-2. [Information](#information)
-2. [Example 1](#example)
-3. [Example 2](#example2)
-3. [Additional Example](#additional)
-4. [License](#license)
+1. [Information](#information)
+2. [Setup](#setup)
+3. [Example 1 - Kotlin](#example-1-kotlin)
+4. [Example 1 - Java](#example-1-java)
+5. [Example 2 - Java](#example-2-java)
+6. [Additional Example](#additional-example)
+7. [License](#license)
 
+
+## Information
+As long as you have `Context` you can request a permission from anywhere. Make sure you implement `IPermissionsListener` to receive information about what is happening with your permission request.
 
 ## Setup
 
@@ -62,12 +66,12 @@ dependencies {
 
 <a name="information"/>
 
-## Information
-As long as you have `Context` you can request a permission from anywhere. Make sure you implement `IPermissionsListener` to receive information about what is happening with your permission request.
+## Example 1 Kotlin
+This example uses a `Service` to request the permission, something that cannot be done without EasyPermissions. It also automatically requests the permissions that you have enabled on your `AndroidManifest`.
 
 
-## Example 1
-This example uses a `Service` to request the permission, something native Android does not allow. It also automatically requests the permissions that you have enabled on your Manifest.
+## Example 1 Java
+This example uses a `Service` to request the permission, something that cannot be done without EasyPermissions. It also automatically requests the permissions that you have enabled on your `AndroidManifest`.
 
 ```java
 public class ExampleService extends Service implements IPermissionsListener
@@ -94,8 +98,7 @@ public class ExampleService extends Service implements IPermissionsListener
 ```
 
 
-<a name="example2"/>
-## Example 2
+## Example 2 Java
 This example uses a `Service` to request the permission, something native Android does not allow. This example allows more flexibility so that you can decide which permissions you desire.
 
 ```java
