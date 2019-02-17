@@ -102,10 +102,10 @@ public class ExampleService extends Service implements IPermissionsListener
     }
 
     @Override
-    public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions){}
+    public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions) {}
 
     @Override
-    public void onFailure(IError error){}
+    public void onFailure(IError error) {}
 }
 ```
 
