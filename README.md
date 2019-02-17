@@ -22,8 +22,8 @@ EasyPermissions.getInstance().requestPermissions(this, this)
    * [Kotlin](#kotlin)
    * [Java](#java)
 4. [Example 2](#example-2)
-   * [Kotlin](#kotlin)
-   * [Java](#java)
+   * [Kotlin](#kotlin2)
+   * [Java](#java2)
 5. [Additional Example](#additional-example)
 6. [License](#license)
 7. [Contact](#contact)
@@ -115,7 +115,7 @@ public class ExampleService extends Service implements IPermissionsListener
 This example allows more flexibility so that you can decide which permissions you desire. Request as many permissions as you like. You may seperate them by commas or pass an array. Make sure that these permissions are declared in your `AndroidManifest` as well.
 
 ### Kotlin
-```kolin
+```kotlin
 EasyPermissions.getInstance().requestPermissions(context, this,
        Manifest.permission.ACCESS_FINE_LOCATION,
        Manifest.permission.CAMERA,
