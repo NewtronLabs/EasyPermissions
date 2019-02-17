@@ -1,6 +1,6 @@
 # Easy Permissions
 
-Easy Permissions allows you to request all the permissions declared in your `AndroidManifest` with one line of code. It knows what permissions you have in your `AndroidManifest` and will request them for you. In addition, it allows you to make this request from anywhere in your code; no longer will you have to request permissions exclusively from an `Activity`.
+Easy Permissions allows you to request all the permissions declared in your `AndroidManifest` with one line of code. It knows what permissions you have declared in your `AndroidManifest` and will request them for you if needed. In addition, it allows you to make this request from anywhere in your code; no longer will you have to request permissions exclusively from an `Activity`.
 
 <p align="center">
   <img src="Diagram.png" width="350" title="Sample use case" alt="Easy Permissions">
@@ -13,8 +13,6 @@ It knows what permissions you have in your `AndroidManifest` and will request th
 ```java
 EasyPermissions.getInstance().requestPermissions(this, this);
 ```
-
-
 
 ---
 
