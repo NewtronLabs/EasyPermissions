@@ -110,35 +110,25 @@ public class ExampleService extends Service implements IPermissionsListener
 
 
 ## Example 2
-This example allows more flexibility so that you can decide which permissions you desire.
+This example allows more flexibility so that you can decide which permissions you desire. Request as many permissions as you like. You may seperate them by commas or pass an array. Make sure that these permissions are declared in your `AndroidManifest` as well.
+
+### Kotlin
+```kolin
+EasyPermissions.getInstance().requestPermissions(context, this,
+       Manifest.permission.ACCESS_FINE_LOCATION,
+       Manifest.permission.CAMERA,
+       Manifest.permission.CALL_PHONE,
+       Manifest.permission.WRITE_EXTERNAL_STORAGE)
+```
+
+### Java
 
 ```java
-public class ExampleService extends Service implements IPermissionsListener
-{
-    @Override
-    public void onCreate()
-    {
-        super.onCreate();
-
-        // Request as many permissions as you like. You may seperate them by commas or pass an array.
-        // Make sure that these permissions are in your Manifest as well.
-        EasyPermissions.getInstance().requestPermissions(this, this,
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.CAMERA,
-                Manifest.permission.CALL_PHONE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE);
-    }
-
-    @Override
-    public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions)
-    {
-    }
-
-    @Override
-    public void onFailure()
-    {
-    }
-}
+EasyPermissions.getInstance().requestPermissions(context, this,
+       Manifest.permission.ACCESS_FINE_LOCATION,
+       Manifest.permission.CAMERA,
+       Manifest.permission.CALL_PHONE,
+       Manifest.permission.WRITE_EXTERNAL_STORAGE);
 ```
 
 
