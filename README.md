@@ -43,7 +43,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
-        classpath 'com.newtronlabs.android:plugin:2.0.1'
+        classpath 'com.newtronlabs.android:plugin:2.0.2-alpha'
     }
 }
 
@@ -74,16 +74,16 @@ This example uses a `Service` to request the permission, something that cannot b
 ### Kotlin
 ```kotlin
 class ExampleService : Service(), IPermissionsListener {
-    fun onCreate() {
+    override fun onCreate() {
         super.onCreate()
 
         // Will request all permissions from the Manifest automatically.
         EasyPermissions.getInstance().requestPermissions(this, this)
     }
 
-    fun onCompleted(grantedPermissions: Set<String>, deniedPermissions: Set<String>) {}
+    override fun onCompleted(grantedPermissions: Set<String>, deniedPermissions: Set<String>) {}
 
-    fun onFailure(error: IError) {}
+    override fun onFailure(error: IError) {}
 }
 ```
 
