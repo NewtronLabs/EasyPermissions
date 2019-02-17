@@ -143,7 +143,7 @@ As an Android requirement permissions must be included in the Manifest.
  ```
 
 ## Additional Example
-More detailed exmaples can be found in this repo's samples folders: [Demo app](../Sample)
+More detailed exmaples can be found in this repo's samples folders: [Demo app](/Sample)
 
 ---
 ## License
