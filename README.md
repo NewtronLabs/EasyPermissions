@@ -22,11 +22,10 @@ EasyPermissions.getInstance().requestPermissions(this, this)
    * [Kotlin](#kotlin)
    * [Java](#java)
 4. [Example 2](#example-2)
-   * [Kotlin](#kotlin2)
-   * [Java](#java2)
-5. [Additional Example](#additional-example)
-6. [License](#license)
-7. [Contact](#contact)
+5. [Example 3](#example-3)
+6. [Additional Example](#additional-example)
+7. [License](#license)
+8. [Contact](#contact)
 
 
 ## Information
@@ -64,7 +63,7 @@ In the `build.gradle` for your app.
 
 ```gradle
 dependencies {
-    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.4.1'
+    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.5.0'
 }
 ```
 
@@ -114,18 +113,7 @@ public class ExampleService extends Service implements IPermissionsListener
 ## Example 2
 This example allows more flexibility so that you can decide which permissions you desire. Request as many permissions as you like. You may seperate them by commas or pass an array. Make sure that these permissions are declared in your `AndroidManifest` as well.
 
-### Kotlin
 ```kotlin
-EasyPermissions.getInstance().requestPermissions(context, this,
-       Manifest.permission.ACCESS_FINE_LOCATION,
-       Manifest.permission.CAMERA,
-       Manifest.permission.CALL_PHONE,
-       Manifest.permission.WRITE_EXTERNAL_STORAGE)
-```
-
-### Java
-
-```java
 EasyPermissions.getInstance().requestPermissions(context, this,
        Manifest.permission.ACCESS_FINE_LOCATION,
        Manifest.permission.CAMERA,
@@ -133,6 +121,12 @@ EasyPermissions.getInstance().requestPermissions(context, this,
        Manifest.permission.WRITE_EXTERNAL_STORAGE);
 ```
 
+## Example 3
+Get a set of granted permissions.
+
+```kotlin
+EasyPermissions.getInstance().getGrantedPermissions(this);
+```
 
 ### Always add the permission to your AndroidManifest.xml
 
