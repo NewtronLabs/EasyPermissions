@@ -18,11 +18,10 @@ EasyPermissions.getInstance().requestPermissions(this, this);
 # Table of Contents
 1. [Information](#information)
 2. [Setup](#setup)
-3. [Example 1 - Kotlin](#example-1-kotlin)
-4. [Example 1 - Java](#example-1-java)
-5. [Example 2 - Java](#example-2-java)
-6. [Additional Example](#additional-example)
-7. [License](#license)
+3. [Example 1](#example-1)
+4. [Example 2](#example-2-java)
+5. [Additional Example](#additional-example)
+6. [License](#license)
 
 
 ## Information
@@ -64,14 +63,15 @@ dependencies {
 }
 ```
 
-<a name="information"/>
-
-## Example 1 Kotlin
+## Example 1 
 This example uses a `Service` to request the permission, something that cannot be done without EasyPermissions. It also automatically requests the permissions that you have enabled on your `AndroidManifest`.
 
 
-## Example 1 Java
-This example uses a `Service` to request the permission, something that cannot be done without EasyPermissions. It also automatically requests the permissions that you have enabled on your `AndroidManifest`.
+### Kotlin
+
+
+
+### Java
 
 ```java
 public class ExampleService extends Service implements IPermissionsListener
@@ -98,7 +98,7 @@ public class ExampleService extends Service implements IPermissionsListener
 ```
 
 
-## Example 2 Java
+## Example 2
 This example uses a `Service` to request the permission, something native Android does not allow. This example allows more flexibility so that you can decide which permissions you desire.
 
 ```java
