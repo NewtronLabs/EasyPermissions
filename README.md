@@ -9,17 +9,22 @@ Easy Permissions allows you to request all the permissions declared in your `And
 ----
 
 ## Sample
-
-Will request all permissions from the `AndroidManifest` automatically.
+It knows what permissions you have in your `AndroidManifest` and will request them if needed.
 ```java
 EasyPermissions.getInstance().requestPermissions(this, this);
 ```
+
+
+
+---
 
 # Table of Contents
 1. [Information](#information)
 2. [Setup](#setup)
 3. [Example 1](#example-1)
-4. [Example 2](#example-2-java)
+   * [Kotlin](#kotlin)
+   * [Java](#java)
+4. [Example 2](#example-2)
 5. [Additional Example](#additional-example)
 6. [License](#license)
 7. [Contact](#contact)
@@ -69,8 +74,20 @@ This example uses a `Service` to request the permission, something that cannot b
 
 
 ### Kotlin
+```kotlin
+class ExampleService : Service(), IPermissionsListener {
+    fun onCreate() {
+        super.onCreate()
 
+        // Will request all permissions from the Manifest automatically.
+        EasyPermissions.getInstance().requestPermissions(this, this)
+    }
 
+    fun onCompleted(grantedPermissions: Set<String>, deniedPermissions: Set<String>) {}
+
+    fun onFailure(error: IError) {}
+}
+```
 
 ### Java
 
@@ -87,14 +104,10 @@ public class ExampleService extends Service implements IPermissionsListener
     }
 
     @Override
-    public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions)
-    {
-    }
+    public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions){}
 
     @Override
-    public void onFailure(IError error)
-    {
-    }
+    public void onFailure(IError error){}
 }
 ```
 
