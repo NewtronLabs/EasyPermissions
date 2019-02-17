@@ -22,6 +22,7 @@ EasyPermissions.getInstance().requestPermissions(this, this);
 4. [Example 2](#example-2-java)
 5. [Additional Example](#additional-example)
 6. [License](#license)
+7. [Contact](#contact)
 
 
 ## Information
@@ -99,7 +100,7 @@ public class ExampleService extends Service implements IPermissionsListener
 
 
 ## Example 2
-This example uses a `Service` to request the permission, something native Android does not allow. This example allows more flexibility so that you can decide which permissions you desire.
+This example allows more flexibility so that you can decide which permissions you desire.
 
 ```java
 public class ExampleService extends Service implements IPermissionsListener
