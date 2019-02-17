@@ -6,6 +6,8 @@ Easy Permissions allows you to request all the permissions declared in your `And
   <img src="Sample-Diagram.png" width="350" title="Sample use case" alt="Easy Permissions">
 </p>
 
+---
+
 **Sample** - It knows what permissions you have in your `AndroidManifest` and will request them if needed.
 ```kotlin
 EasyPermissions.getInstance().requestPermissions(this, this)
