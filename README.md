@@ -23,7 +23,7 @@ EasyPermissions.getInstance().requestPermissions(this, this)
    * [Java](#java)
 4. [Example 2](#example-2)
 5. [Example 3](#example-3)
-6. [Additional Example](#additional-example)
+6. [Demo App](#demo-app)
 7. [License](#license)
 8. [Contact](#contact)
 
@@ -32,7 +32,6 @@ EasyPermissions.getInstance().requestPermissions(this, this)
 As long as you have `Context` you can request a permission from anywhere. Make sure you implement `IPermissionsListener` to receive information about what is happening with your permission request.
 
 ## Setup
-
 Include the below dependencies in your `build.gradle` project.
 
 ```gradle
@@ -88,7 +87,6 @@ class ExampleService : Service(), IPermissionsListener {
 ```
 
 ### Java
-
 ```java
 public class ExampleService extends Service implements IPermissionsListener
 {
@@ -108,7 +106,6 @@ public class ExampleService extends Service implements IPermissionsListener
     public void onFailure(IError error) {}
 }
 ```
-
 
 ## Example 2
 This example allows more flexibility so that you can decide which permissions you desire. Request as many permissions as you like. You may seperate them by commas or pass an array. Make sure that these permissions are declared in your `AndroidManifest` as well.
@@ -139,12 +136,12 @@ As an Android requirement permissions must be included in the Manifest.
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
  ```
 
-## Additional Example
+## Demo App
 More detailed exmaples can be found in this repo's samples folders: [Demo app](/Sample)
 
 ---
-## License
 
+## License
 Easy Permissions binaries and source code can only be used in accordance with Freeware license. That is, freeware may be used without payment, but may not be modified. The developer of Easy Permissions retains all rights to change, alter, adapt, and/or distribute the software. Easy Permissions is not liable for any damages and/or losses incurred during the use of Easy Permissions.
 
 You may not decompile, reverse engineer, pull apart, or otherwise attempt to dissect the source code, algorithm, technique or other information from the binary code of Easy Permissions unless it is authorized by existing applicable law and only to the extent authorized by such law. In the event that such a law applies, user may only attempt the foregoing if: (1) user has contacted Newtron Labs to request such information and Newtron Labs has failed to respond in a reasonable time, or (2) reverse engineering is strictly necessary to obtain such information and Newtron Labs has failed to reply. Any information obtained by user from Newtron Labs may be used only in accordance to the terms agreed upon by Newtron Labs and in adherence to Newtron Labs confidentiality policy. Such information supplied by Newtron Labs and received by user shall not be disclosed to a third party or used to create a software substantially similar to the technique or expression of the Newtron Labs Easy Permissions software.
