@@ -41,8 +41,8 @@ buildscript {
         maven { url "http://code.newtronlabs.com:8081/artifactory/libs-release-local" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
-        classpath 'com.newtronlabs.android:plugin:2.0.2-alpha'
+        classpath 'com.android.tools.build:gradle:3.3.1'
+        classpath 'com.newtronlabs.android:plugin:2.0.5-alpha'
     }
 }
 
@@ -62,7 +62,7 @@ In the `build.gradle` for your app.
 
 ```gradle
 dependencies {
-    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.4.1'
+    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.5.0'
 }
 ```
 
