@@ -11,13 +11,11 @@ Easy Permissions allows you to request all the permissions declared in your `And
 **Sample** - It knows what permissions you have in your `AndroidManifest` and will request them if needed.
 ```kotlin
 EasyPermissions.getInstance().requestPermissions(IPermissionsListener() {
-   @Override
-   public void onCompleted(Set<String> granted, Set<String> denied){
+   override fun onCompleted(Set<String> granted, Set<String> denied) {
 
    }
 
-   @Override
-   public void onFailure(IError iError){
+   override fun onFailure(IError iError) {
 
    }
 })
