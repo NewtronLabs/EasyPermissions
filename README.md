@@ -10,7 +10,17 @@ Easy Permissions allows you to request all the permissions declared in your `And
 
 **Sample** - It knows what permissions you have in your `AndroidManifest` and will request them if needed.
 ```kotlin
-EasyPermissions.getInstance().requestPermissions(this, this)
+EasyPermissions.getInstance().requestPermissions(IPermissionsListener() {
+   @Override
+   public void onCompleted(Set<String> granted, Set<String> denied){
+
+   }
+
+   @Override
+   public void onFailure(IError iError){
+
+   }
+})
 ```
 
 ---
@@ -29,7 +39,7 @@ EasyPermissions.getInstance().requestPermissions(this, this)
 
 
 ## Information
-As long as you have `Context` you can request a permission from anywhere. Make sure you implement `IPermissionsListener` to receive information about what is happening with your permission request.
+Request permissions from anywhere. Make sure you implement `IPermissionsListener` to receive information about what is happening with your permission request.
 
 ## Setup
 Include the below dependencies in your `build.gradle` project.
@@ -62,7 +72,7 @@ In the `build.gradle` for your app.
 
 ```gradle
 dependencies {
-    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.5.0'
+    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.7.0'
 }
 ```
 
