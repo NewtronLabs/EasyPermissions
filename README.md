@@ -85,7 +85,7 @@ class ExampleService : Service(), IPermissionsListener {
         super.onCreate()
 
         // Will request all permissions from the Manifest automatically.
-        EasyPermissions.getInstance().requestPermissions(this, this)
+        EasyPermissions.getInstance().requestPermissions(this)
     }
 
     override fun onCompleted(grantedPermissions: Set<String>, deniedPermissions: Set<String>) {}
@@ -104,7 +104,7 @@ public class ExampleService extends Service implements IPermissionsListener
         super.onCreate();
         
         // Will request all permissions from the Manifest automatically.
-        EasyPermissions.getInstance().requestPermissions(this, this);
+        EasyPermissions.getInstance().requestPermissions(this);
     }
 
     @Override
@@ -119,7 +119,7 @@ public class ExampleService extends Service implements IPermissionsListener
 This example allows more flexibility so that you can decide which permissions you desire. Request as many permissions as you like. You may seperate them by commas or pass an array. Make sure that these permissions are declared in your `AndroidManifest` as well.
 
 ```kotlin
-EasyPermissions.getInstance().requestPermissions(context, this,
+EasyPermissions.getInstance().requestPermissions(this,
        Manifest.permission.ACCESS_FINE_LOCATION,
        Manifest.permission.CAMERA,
        Manifest.permission.CALL_PHONE,
@@ -130,7 +130,7 @@ EasyPermissions.getInstance().requestPermissions(context, this,
 Get a set of granted permissions.
 
 ```kotlin
-EasyPermissions.getInstance().getGrantedPermissions(this);
+EasyPermissions.getInstance().getGrantedPermissions();
 ```
 
 ### Always add the permission to your AndroidManifest.xml
