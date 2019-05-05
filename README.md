@@ -96,11 +96,9 @@ class ExampleService : Service(), IPermissionsListener {
 
 ### Java
 ```java
-public class ExampleService extends Service implements IPermissionsListener
-{
+public class ExampleService extends Service implements IPermissionsListener {
     @Override
-    public void onCreate()
-    {
+    public void onCreate() {
         super.onCreate();
         
         // Will request all permissions from the Manifest automatically.
