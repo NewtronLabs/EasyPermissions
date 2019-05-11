@@ -15,9 +15,7 @@ EasyPermissions.getInstance().requestPermissions(IPermissionsListener() {
 
    }
 
-   override fun onFailure(IError iError) {
-
-   }
+   override fun onFailure(IError error) {}
 })
 ```
 
@@ -128,7 +126,7 @@ EasyPermissions.getInstance().requestPermissions(this,
 Get a set of granted permissions.
 
 ```kotlin
-EasyPermissions.getInstance().getGrantedPermissions();
+EasyPermissions.getInstance().getGrantedPermissions()
 ```
 
 ### Always add the permission to your AndroidManifest.xml
