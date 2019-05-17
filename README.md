@@ -10,12 +10,12 @@ Easy Permissions allows you to request all the permissions declared in your `And
 
 **Sample** - It knows what permissions you have in your `AndroidManifest` and will request them if needed.
 ```kotlin
-EasyPermissions.getInstance().requestPermissions(IPermissionsListener() {
-   override fun onCompleted(Set<String> granted, Set<String> denied) {
+EasyPermissions.getInstance().requestPermissions(object: IPermissionsListener {
 
-   }
+    override fun onCompleted(granted: Set<String>, denied: Set<String>) {
+    }
 
-   override fun onFailure(IError error) {}
+    override fun onFailure(throwable: Throwable) {}
 })
 ```
 
@@ -68,7 +68,7 @@ In the `build.gradle` for your app.
 
 ```gradle
 dependencies {
-    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.7.0'
+    compileOnly 'com.newtronlabs.easypermissions:easypermissions:2.8.2'
 }
 ```
 
@@ -88,7 +88,7 @@ class ExampleService : Service(), IPermissionsListener {
 
     override fun onCompleted(grantedPermissions: Set<String>, deniedPermissions: Set<String>) {}
 
-    override fun onFailure(error: IError) {}
+    override fun onFailure(throwable: Throwable) {}
 }
 ```
 
@@ -107,7 +107,7 @@ public class ExampleService extends Service implements IPermissionsListener {
     public void onCompleted(Set<String> grantedPermissions, Set<String> deniedPermissions) {}
 
     @Override
-    public void onFailure(IError error) {}
+    public void onFailure(Throwable throwable) {}
 }
 ```
 
