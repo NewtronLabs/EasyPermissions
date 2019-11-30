@@ -46,7 +46,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.2'
-        classpath 'com.newtronlabs.android:plugin:3.0.0'
+        classpath 'com.newtronlabs.android:plugin:4.0.0'
     }
 }
 
@@ -66,7 +66,7 @@ In the `build.gradle` for your app.
 
 ```gradle
 dependencies {
-    compileOnly 'com.newtronlabs.easypermissions:easypermissions:3.0.0'
+    compileOnly 'com.newtronlabs.easypermissions:easypermissions:4.0.0'
 }
 ```
 
