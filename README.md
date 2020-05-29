@@ -66,7 +66,7 @@ In the `build.gradle` for your app.
 
 ```gradle
 dependencies {
-    compileOnly 'com.newtronlabs.easypermissions:easypermissions:4.0.0'
+    compileOnly 'com.newtronlabs.easypermissions:easypermissions:4.0.1'
 }
 ```
 
