@@ -43,7 +43,11 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven { url "https://newtronlabs.jfrog.io/artifactory/libs-release-local" }
+        maven { url "https://newtronlabs.jfrog.io/artifactory/libs-release-local"
+            metadataSources {
+                artifact()
+            }
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.2'
@@ -55,7 +59,11 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url "https://newtronlabs.jfrog.io/artifactory/libs-release-local" }
+        maven { url "https://newtronlabs.jfrog.io/artifactory/libs-release-local"
+            metadataSources {
+                artifact()
+            }
+        }
     }
 }
 
