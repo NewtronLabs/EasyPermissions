@@ -153,7 +153,7 @@ More detailed exmaples can be found in this repo's samples folders: [Demo app](/
 
 ---
 
-<script src="https://gist.github.com/NewtronLabs/8a093af67f1d2d999dd5403df3a8ff74.js"></script>
+https://gist.github.com/NewtronLabs/8a093af67f1d2d999dd5403df3a8ff74.js
 
 ---
 
