@@ -153,15 +153,15 @@ More detailed exmaples can be found in this repo's samples folders: [Demo app](/
 
 ---
 
-## Support us
-Please support the development of these libraries. We host and develop these libraries for free. Any support is welcomed. Thank you!
+## Support Us
+Please support the continued development of these libraries. We host and develop these libraries for free. Any support is deeply appriciated. Thank you!
 
 <p align="center">
   <img src="https://drive.google.com/uc?id=1rbY8qjxvWU8GQgaqDrOY4-fYOWobQKk3" width="200" height="200" title="Support us" alt="Support us">
 </p>
 
 <p align="center">
-  **BTC Address:** 39JmAfnNhaEPKz5wjQjQQj4jcv9BM11NQb
+  <strong>BTC Address:</strong> 39JmAfnNhaEPKz5wjQjQQj4jcv9BM11NQb
 </p>
 
 
