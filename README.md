@@ -153,7 +153,14 @@ More detailed exmaples can be found in this repo's samples folders: [Demo app](/
 
 ---
 
-https://gist.github.com/NewtronLabs/8a093af67f1d2d999dd5403df3a8ff74.js
+## Support us
+Please support the development of these libraries. We host and develop these libraries for free. Any support is welcomed. Thank you!
+
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1rbY8qjxvWU8GQgaqDrOY4-fYOWobQKk3" width="250" height="250" title="Sample use case" alt="Support us">
+</p>
+### BTC Address
+#### 39JmAfnNhaEPKz5wjQjQQj4jcv9BM11NQb
 
 ---
 
