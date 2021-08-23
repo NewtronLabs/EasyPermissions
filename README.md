@@ -28,8 +28,9 @@ EasyPermissions.getInstance().requestPermissions(IPermissionsListener(
 4. [Example 2](#example-2)
 5. [Example 3](#example-3)
 6. [Demo App](#demo-app)
-7. [License](#license)
-8. [Contact](#contact)
+7. [Support Us](#support-us)
+8. [License](#license)
+9. [Contact](#contact)
 
 
 ## Information
