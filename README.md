@@ -158,9 +158,10 @@ Please support the development of these libraries. We host and develop these lib
 
 <p align="center">
   <img src="https://drive.google.com/uc?id=1rbY8qjxvWU8GQgaqDrOY4-fYOWobQKk3" width="200" height="200" title="Sample use case" alt="Support us">
+  **BTC Address:** 39JmAfnNhaEPKz5wjQjQQj4jcv9BM11NQb
 </p>
 
-**BTC Address:** 39JmAfnNhaEPKz5wjQjQQj4jcv9BM11NQb
+
 
 ---
 
