@@ -43,7 +43,6 @@ Include the below dependencies in your `build.gradle` project.
 buildscript {
     repositories {
         google()
-        jcenter()
         maven { url "https://newtronlabs.jfrog.io/artifactory/libs-release-local"
             metadataSources {
                 artifact()
@@ -59,7 +58,6 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
         maven { url "https://newtronlabs.jfrog.io/artifactory/libs-release-local"
             metadataSources {
                 artifact()
