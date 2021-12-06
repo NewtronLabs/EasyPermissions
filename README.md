@@ -50,7 +50,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.4'
+        classpath 'com.android.tools.build:gradle:7.0.0'
         classpath 'com.newtronlabs.android:plugin:5.0.1-alpha01'
     }
 }
